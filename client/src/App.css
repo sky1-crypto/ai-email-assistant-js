@@ -1,0 +1,150 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.assistant {
+  width: 100%;
+  max-width: 650px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+h1 {
+  text-align: center;
+}
+
+.assistant > p {
+  text-align: center;
+  color: #666;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font: inherit;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+button {
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+.email-preview {
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.email-preview label {
+  display: block;
+  margin: 15px 0 7px;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}
+
+
+.approval-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.approval-buttons button {
+  flex: 1;
+}
+
+.reject-btn {
+  background: #dc2626;
+}
+
+.approval-buttons button:hover {
+  opacity: 0.85;
+}
+
+
+
+.chat-box {
+  height: 350px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.message {
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  max-width: 85%;
+}
+
+.message p {
+  margin-bottom: 0;
+  white-space: pre-wrap;
+}
+
+.message.assistant {
+  background: #eff6ff;
+  margin-right: auto;
+}
+
+.message.user {
+  background: #dcfce7;
+  margin-left: auto;
+}
+
+.chat-box + form {
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-box + form input {
+  flex: 1;
+}
+
+.chat-box + form button {
+  min-width: 90px;
+}
